@@ -1,0 +1,85 @@
+html {
+  box-sizing: border-box;
+  font-size: 20px;
+  --fontsize: 1rem;
+  --transition-time: 1s;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+html,
+body {
+  height: 100%;
+}
+
+body {
+  background-color: rgb(241, 241, 241);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#oben,
+#unten {
+  font-family: "Pacifico", cursive;
+  font-weight: 200;
+  font-size: var(--fontsize);
+  color: midnightblue;
+  opacity: 70%;
+}
+.frame {
+  display: flex;
+  position: relative;
+  border: 2px solid red;
+  max-height: 60%;
+  max-width: 60%;
+  overflow: hidden;
+}
+
+.image {
+  max-width: 100%;
+}
+#oben {
+  display: flex;
+  position: absolute;
+  justify-content: center;
+  top: -5%;
+  width: 100%;
+  transition: top var(--transition-time);
+}
+.BG-oT {
+  position: absolute;
+  background-color: lemonchiffon;
+  height: 10%;
+  width: 100%;
+  opacity: 30%;
+  top: 0%;
+  transition: top var(--transition-time);
+}
+#unten {
+  display: flex;
+  position: absolute;
+  justify-content: center;
+  bottom: -5%;
+  width: 100%;
+  transition: bottom var(--transition-time);
+}
+.BG-uT {
+  position: absolute;
+  background-color: lemonchiffon;
+  height: 10%;
+  width: 100%;
+  opacity: 30%;
+  bottom: 0%;
+  transition: bottom var(--transition-time);
+}
+
+.frame:hover .BG-oT,
+.frame:hover #oben {
+  top: -20%;
+}
+.frame:hover .BG-uT,
+.frame:hover #unten {
+  bottom: -20%;
+}
