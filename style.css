@@ -44,7 +44,7 @@ body {
   display: flex;
   position: absolute;
   justify-content: center;
-  top: -5%;
+  top: -20%;
   width: 100%;
   transition: top var(--transition-time);
 }
@@ -54,14 +54,14 @@ body {
   height: 10%;
   width: 100%;
   opacity: 30%;
-  top: 0%;
+  top: -20%;
   transition: top var(--transition-time);
 }
 #unten {
   display: flex;
   position: absolute;
   justify-content: center;
-  bottom: -5%;
+  bottom: -20%;
   width: 100%;
   transition: bottom var(--transition-time);
 }
@@ -71,15 +71,19 @@ body {
   height: 10%;
   width: 100%;
   opacity: 30%;
-  bottom: 0%;
+  bottom: -20%;
   transition: bottom var(--transition-time);
 }
 
-.frame:hover .BG-oT,
-.frame:hover #oben {
-  top: -20%;
+.frame:hover .BG-oT {
+  top: 0%;
 }
-.frame:hover .BG-uT,
+.frame:hover #oben {
+  top: -5%;
+}
+.frame:hover .BG-uT {
+  bottom: 0%;
+}
 .frame:hover #unten {
-  bottom: -20%;
+  bottom: -5%;
 }
